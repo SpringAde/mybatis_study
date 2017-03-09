@@ -43,11 +43,24 @@ public class StudentDaoTest {
 		Assert.assertEquals(1, res);		// 1과 같아야 성공 (Updates: 1)
 	}
 	*/
-	@Test
+/*	@Test
 	public void testselectStudentByNo(){
 		Student student = studentService.selectStudentByNo(1);
 		Assert.assertNotNull(student);
+	}*/
+	
+	@Test
+	public void testUpdateStudentByNo(){
+		Student student = studentService.selectStudentByNo(3);
+		Assert.assertNotNull(student);
 	}
+	
+/*	@Test
+	public void testDeleteStudent(){
+		int studNo = studentService.deleteStudentByNo(2);
+		int res = studentService.deleteStudentByNo(studNo);
+		Assert.assertEquals(1, res);		
+	}*/
 	
 
 }
