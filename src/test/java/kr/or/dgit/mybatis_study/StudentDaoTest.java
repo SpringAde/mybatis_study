@@ -55,12 +55,12 @@ public class StudentDaoTest {
 		Assert.assertNotNull(student);
 	}
 	
-/*	@Test
+	@Test
 	public void testDeleteStudent(){
 		int studNo = studentService.deleteStudentByNo(2);
 		int res = studentService.deleteStudentByNo(studNo);
 		Assert.assertEquals(1, res);		
-	}*/
+	}
 	
 
 }
