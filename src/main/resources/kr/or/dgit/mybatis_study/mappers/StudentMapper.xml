@@ -6,5 +6,9 @@
 		select stud_id, name, email, dob from student
 	</select>
 
-
+	<insert id="insertStudent" parameterType="Student">
+		insert into student (stud_id, name, email, dob)
+		values(#{studId}, #{name}, #{email}, #{dob})			<!-- rs작업과 동일 -->
+	</insert>
+	
 </mapper>

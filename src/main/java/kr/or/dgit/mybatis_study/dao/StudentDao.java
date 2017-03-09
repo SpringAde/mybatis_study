@@ -5,6 +5,6 @@ import java.util.List;
 import kr.or.dgit.mybatis_study.dto.Student;
 
 public interface StudentDao {
-//	int insertStudent(Student student);
+	int insertStudent(Student student);
 	List<Student> selectStudentByAll();
 }

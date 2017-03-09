@@ -2,6 +2,7 @@ package kr.or.dgit.mybatis_study;
 
 import static org.junit.Assert.*;
 
+import java.util.Date;
 import java.util.List;
 
 import org.junit.AfterClass;
@@ -32,6 +33,14 @@ public class StudentDaoTest {
 			System.out.println(s);
 		}
 		Assert.assertNotNull(lists);
+	}
+	
+	@Test
+	public void testInsertStudent(){
+		Student student = new Student(3, "라라라", "lala@test.co.kr", new Date());
+		int res = studentService.insertStudent(student);
+		
+		Assert.assertEquals(1, res);		// 1과 같아야 성공 (Updates: 1)
 	}
 
 }

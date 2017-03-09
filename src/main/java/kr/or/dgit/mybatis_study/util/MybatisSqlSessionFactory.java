@@ -10,7 +10,8 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 // DBCon 작업
 public class MybatisSqlSessionFactory {
-	private static SqlSessionFactory sqlSessionFactory;
+	
+	private static SqlSessionFactory sqlSessionFactory;	
 
 	public static SqlSessionFactory getSqlSessionFactory() {
 		if (sqlSessionFactory == null){

@@ -22,4 +22,11 @@ public class StudentService {
 		return studentDao.selectStudentByAll();		//맵퍼의 id로 sql문장을 가져온다.		
 	}
 	
+	public int insertStudent(Student student){
+		SqlSession sqlSession = MybatisSqlSessionFactory.openSession();
+		StudentDao studentDao = sqlSession.getMapper(StudentDao.class);
+		int res = studentDao.insertStudent(student);
+		sqlSession.commit();		// 반드시 실행해야 적용
+		return res;
+	}
 }
