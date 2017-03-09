@@ -37,7 +37,7 @@ public class StudentDaoTest {
 	
 	@Test
 	public void testInsertStudent(){
-		Student student = new Student(3, "라라라", "lala@test.co.kr", new Date());
+		Student student = new Student(4, "라라라", "lala@test.co.kr", new Date());
 		int res = studentService.insertStudent(student);
 		
 		Assert.assertEquals(1, res);		// 1과 같아야 성공 (Updates: 1)
