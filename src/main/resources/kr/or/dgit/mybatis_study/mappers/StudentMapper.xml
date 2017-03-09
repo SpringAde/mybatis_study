@@ -15,4 +15,12 @@
 		select stud_id, name, email, dob from student 
 		where stud_id = #{studId}
 	</select>
+	
+	<update id="updateStudent" parameterType="Student">
+		update student set name=#{name}, email=#{email}, dob=#{dob} where stud_id = #{studId}
+	</update>
+	
+	<delete id="deleteStudentByNo" parameterType="int">
+		delete from student where stud_id = #{studId}
+	</delete>
 </mapper>

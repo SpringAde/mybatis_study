@@ -8,7 +8,7 @@ import kr.or.dgit.mybatis_study.dao.StudentDao;
 import kr.or.dgit.mybatis_study.dto.Student;
 import kr.or.dgit.mybatis_study.util.MybatisSqlSessionFactory;
 
-public class StudentService {
+public class StudentService{
 	private static final StudentService instance= new StudentService();
 	public static StudentService getInstance() {
 		return instance;
@@ -34,5 +34,17 @@ public class StudentService {
 		SqlSession sqlSession = MybatisSqlSessionFactory.openSession();
 		StudentDao studentDao = sqlSession.getMapper(StudentDao.class);
 		return studentDao.selectStudentByNo(studNo);		
+	}
+	
+	public int updateStudent(Student student) {
+		SqlSession sqlSession = MybatisSqlSessionFactory.openSession();
+		StudentDao studentDao = sqlSession.getMapper(StudentDao.class);		
+		return studentDao.updateStudent(student);
+	}
+	
+	public int deleteStudentByNo(int studNo) {
+		SqlSession sqlSession = MybatisSqlSessionFactory.openSession();
+		StudentDao studentDao = sqlSession.getMapper(StudentDao.class);
+		return studentDao.deleteStudentByNo(studNo);		
 	}	
 }
