@@ -11,4 +11,8 @@
 		values(#{studId}, #{name}, #{email}, #{dob})			<!-- rs작업과 동일 -->
 	</insert>
 	
+	<select id="selectStudentByNo" parameterType="int" resultType="Student">
+		select stud_id, name, email, dob from student 
+		where stud_id = #{studId}
+	</select>
 </mapper>

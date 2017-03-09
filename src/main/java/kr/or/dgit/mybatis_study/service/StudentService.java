@@ -29,4 +29,10 @@ public class StudentService {
 		sqlSession.commit();		// 반드시 실행해야 적용
 		return res;
 	}
+	
+	public Student selectStudentByNo(int studNo){
+		SqlSession sqlSession = MybatisSqlSessionFactory.openSession();
+		StudentDao studentDao = sqlSession.getMapper(StudentDao.class);
+		return studentDao.selectStudentByNo(studNo);		
+	}	
 }

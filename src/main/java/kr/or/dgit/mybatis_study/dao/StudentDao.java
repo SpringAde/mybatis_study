@@ -8,4 +8,5 @@ public interface StudentDao {
 	int insertStudent(Student student);
 	List<Student> selectStudentByAll();
 	Student selectStudentByNo(int studNo);
+	 
 }

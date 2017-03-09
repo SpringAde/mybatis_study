@@ -34,7 +34,7 @@ public class StudentDaoTest {
 		}
 		Assert.assertNotNull(lists);
 	}
-	
+/*	
 	@Test
 	public void testInsertStudent(){
 		Student student = new Student(4, "라라라", "lala@test.co.kr", new Date());
@@ -42,5 +42,12 @@ public class StudentDaoTest {
 		
 		Assert.assertEquals(1, res);		// 1과 같아야 성공 (Updates: 1)
 	}
+	*/
+	@Test
+	public void testselectStudentByNo(){
+		Student student = studentService.selectStudentByNo(1);
+		Assert.assertNotNull(student);
+	}
+	
 
 }
