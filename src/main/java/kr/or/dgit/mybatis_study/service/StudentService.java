@@ -30,6 +30,20 @@ public class StudentService{
 		return res;
 	}
 	
+	public int insertStudentWithPhone(Student student){
+		int res = -1;		// 성공실패를 판단하기 위한 -1
+		try(SqlSession sqlSession = MybatisSqlSessionFactory.openSession();){		// 이렇게 하면 finally close()안하고 자동으로 close()호출된다.
+			StudentDao studentDao = sqlSession.getMapper(StudentDao.class);
+			res = studentDao.insertStudentWithPhone(student);
+			sqlSession.commit();
+		} catch(Exception e){
+			e.printStackTrace();
+		} 
+		return res;
+		
+		
+	}
+	
 	public Student selectStudentByNo(int studNo){
 		SqlSession sqlSession = MybatisSqlSessionFactory.openSession();
 		StudentDao studentDao = sqlSession.getMapper(StudentDao.class);		

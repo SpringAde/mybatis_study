@@ -4,12 +4,20 @@
 
 	<select id="selectStudentByAll" resultType="Student">
 		select stud_id, name, email, dob from student
+		<!-- stud_id:마이바티스가 내부적으로 getStudID()호출하여 자동 매핑  -->
+		<!-- mapUnderscoreToCamelCase(true) -->
 	</select>
 
 	<insert id="insertStudent" parameterType="Student">
 		insert into student (stud_id, name, email, dob)
 		values(#{studId}, #{name}, #{email}, #{dob})			<!-- rs작업과 동일 -->
 	</insert>
+	
+	<insert id="insertStudentWithPhone" parameterType="Student">
+		insert into student (stud_id, name, email, dob, phone)
+		values(#{studId}, #{name}, #{email}, #{dob}, #{phone})
+	</insert>
+	
 	
 	<select id="selectStudentByNo" parameterType="int" resultType="Student">
 		select stud_id, name, email, dob from student 
@@ -23,4 +31,7 @@
 	<delete id="deleteStudentByNo" parameterType="int">
 		delete from student where stud_id = #{studId}
 	</delete>
+	
+	
+	
 </mapper>
