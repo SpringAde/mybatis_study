@@ -26,6 +26,7 @@
 			</dataSource>
 		</environment>
 	</environments>
+	
 	<mappers>	
 		<mapper resource="kr/or/dgit/mybatis_study/mappers/StudentMapper.xml" />
 	</mappers>
