@@ -19,7 +19,6 @@ public class Student {
 	}
 
 	public Student(int studId, String name, String email, Date dob, PhoneNumber phone) {
-		super();
 		this.studId = studId;
 		this.name = name;
 		this.email = email;

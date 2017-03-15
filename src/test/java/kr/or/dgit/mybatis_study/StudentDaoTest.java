@@ -45,7 +45,6 @@ public class StudentDaoTest {
 	}
 	
 	
-	
 /*	@Test
 	public void testInsertStudent(){
 		Student student = new Student(4, "라라라", "lala@test.co.kr", new Date());

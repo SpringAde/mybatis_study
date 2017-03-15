@@ -40,8 +40,6 @@ public class StudentService{
 			e.printStackTrace();
 		} 
 		return res;
-		
-		
 	}
 	
 	public Student selectStudentByNo(int studNo){
